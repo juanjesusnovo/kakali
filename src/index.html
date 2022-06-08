@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kakali</title>
+    <link rel="stylesheet" href="Estilos.sass">
+</head>
+<body>
+    <header>
+        <img src="./multimedia/Logo_kakali.png">
+        <h1>KAKALI</h1>
+    </header>
+    <main>
+        <section>
+            <article class="video">
+                <video id="videoPlayer" width="500">
+                    <source src="multimedia/akali_clips.mp4" type="video/mp4">
+                    <source src="multimedia/akali_clips.avi" type="video/avi">
+                    <source src="multimedia/akali_clips.mov" type="video/mov">
+                    <source src="multimedia/akali_clips.webm" type="video/webm">
+                    Tu navegador no soporta el vídeo
+                </video>
+                <div>
+                    <button onclick="playPause()">></button>
+                </div>
+            </article>
+            <article class="imagen">
+                <img id="1" class="e1" src="multimedia/escenario1.png">
+                <img id="2" class="e2" src="multimedia/escenario2.png">
+                <img id="3" class="e3" src="multimedia/escenario3.png">
+                <div>
+                    <button onclick="uno()">1</button>
+                    <button onclick="dos()">2</button>
+                    <button onclick="tres()">3</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        var video = document.getElementById("videoPlayer");
+        function playPause() {
+            if (video.paused)
+                video.play();
+            else
+                video.pause();
+        }
+        var uno1 = document.getElementById("1")
+        var dos2 = document.getElementById("2")
+        var tres3 = document.getElementById("3")
+        function uno(){
+            dos2.style.display = none
+            tres3.style.display = none
+            uno1.style.display = flex
+        }
+        function dos(){
+            uno1.style.display = none
+            tres3.style.display = none
+            dos2.style.display = flex
+        }
+        function tres(){
+            uno1.style.display = none
+            dos2.style.display = none
+            tres3.style.display = flex
+        }
+        /*var imagen = document.getElementById("carrusel")
+        var imagenes = ["escenario1.png","escenario2.png","escenario3.png"]
+        function anterior(){
+            if (imagen == imagenes[0]){
+                imagen = imagenes[3]
+            }
+            else{
+                imagen = imagenes[(imagenes.indexOf(imagen))-1]
+            }
+        }
+        function siguiente(){
+            if (imagen == imagenes[3]){
+                imagen = imagenes[0]
+            }
+            else{
+                imagen = imagenes[(imagenes.indexOf(imagen))+1]
+            }
+        }*/
+    </script>
+</body>
+</html>
