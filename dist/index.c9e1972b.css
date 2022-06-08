@@ -34,7 +34,7 @@ main {
   display: flex;
 }
 
-main section, main section .video {
+section, section .video {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
@@ -42,63 +42,76 @@ main section, main section .video {
   display: flex;
 }
 
-main section .video video {
+section .video video {
   width: 70%;
-  padding: 10px;
+  padding: 20px;
 }
 
-main section .video div {
-  width: 20%;
+section .video div {
+  width: .3%;
 }
 
-main section .video div button {
+section .video div button {
   width: 20px;
   height: 20px;
   background-color: gray;
   border-radius: 100px;
 }
 
-main section .video div button:hover {
+section .video div button:hover {
   width: 30px;
   height: 30px;
   background-color: #d3d3d3;
   border-radius: 200px;
 }
 
-main section .imagen {
+section .imagen {
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-main section .imagen .e1 {
+section .imagen img {
   width: 70%;
   padding: 20px;
+}
+
+section .imagen .uno {
+  width: 10%;
+  justify-content: end;
   display: flex;
 }
 
-main section .imagen .e2, main section .imagen .e3 {
-  width: 70%;
-  padding: 20px;
-  display: none;
-}
-
-main section .imagen div {
-  width: 20%;
-  flex-direction: column;
-  display: flex;
-}
-
-main section .imagen div button {
+section .imagen .uno button {
   width: 20px;
   height: 20px;
   background-color: gray;
   border-radius: 100px;
-  margin: 10px;
 }
 
-main section .imagen div button:hover {
+section .imagen .uno button:hover {
+  width: 30px;
+  height: 30px;
+  background-color: #d3d3d3;
+  border-radius: 200px;
+}
+
+section .imagen .dos {
+  width: 10%;
+  justify-content: start;
+  display: flex;
+}
+
+section .imagen .dos button {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border-radius: 100px;
+}
+
+section .imagen .dos button:hover {
   width: 30px;
   height: 30px;
   background-color: #d3d3d3;
@@ -108,6 +121,12 @@ main section .imagen div button:hover {
 footer {
   min-height: 10vh;
   background-color: #000;
+}
+
+@media (max-width: 750px) {
+  video {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=index.c9e1972b.css.map */

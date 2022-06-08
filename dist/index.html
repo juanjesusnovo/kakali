@@ -13,7 +13,7 @@
     <main>
         <section>
             <article class="video">
-                <video id="videoPlayer" width="500">
+                <video id="videoPlayer">
                     <source src="/akali_clips.3eb23b89.mp4" type="video/mp4">
                     <source src="/akali_clips.1e4a23c9.avi" type="video/avi">
                     <source src="/akali_clips.c3934037.mov" type="video/mov">
@@ -25,14 +25,16 @@
                 </div>
             </article>
             <article class="imagen">
-                <img id="1" class="e1" src="/escenario1.6f2a0a73.png">
-                <img id="2" class="e2" src="/escenario2.5af67a18.png">
-                <img id="3" class="e3" src="/escenario3.389d55ee.png">
-                <div>
-                    <button onclick="uno()">1</button>
-                    <button onclick="dos()">2</button>
-                    <button onclick="tres()">3</button>
-                </div>
+                <div class="uno"><button onclick="atras()"><</button></div>
+                <img id="image" src="/escenario1.6f2a0a73.png">
+                <div class="dos"><button onclick="siguiente()">></button></div>
+            </article>
+            <article class="audio">
+                <audio src="/song.494ab13c.mp3" controls="controls" type="audio/mp3" preload="preload">
+                    <source src="/song.1b5ee036.aiff" type="audio/aiff">
+                    <source src="/song.bd3de1d4.flac" type="audio/flac">
+                    <source src="/song.27c17ce4.wav" type="audio/wav">
+                </audio>
             </article>
         </section>
     </main>
@@ -42,23 +44,24 @@ function playPause() {
     if (video.paused) video.play();
     else video.pause();
 }
-var uno1 = document.getElementById("1");
-var dos2 = document.getElementById("2");
-var tres3 = document.getElementById("3");
-function uno() {
-    dos2.style.display = none;
-    tres3.style.display = none;
-    uno1.style.display = flex;
+var audio = document.getElementById("audioPlayer");
+function playPauseAd() {
+    if (audio.onpause) audio.onplay;
+    else audio.onpause;
 }
-function dos() {
-    uno1.style.display = none;
-    tres3.style.display = none;
-    dos2.style.display = flex;
+var imagen = document.getElementById("image");
+var imagenes = [
+    "multimedia/escenario1.png",
+    "multimedia/escenario2.png",
+    "multimedia/escenario3.png"
+];
+function siguiente() {
+    if (imagen == imagenes[2]) imagen.src = imagenes[0];
+    else imagen.src = imagenes[imagenes.indexOf(imagen) - 1];
 }
-function tres() {
-    uno1.style.display = none;
-    dos2.style.display = none;
-    tres3.style.display = flex;
+function atras() {
+    if (imagen == imagenes[0]) imagen.src = imagenes[imagenes.length];
+    else imagen.src = imagenes[imagenes.indexOf(imagen) + 1];
 } /*var imagen = document.getElementById("carrusel")
         var imagenes = ["escenario1.png","escenario2.png","escenario3.png"]
         function anterior(){
