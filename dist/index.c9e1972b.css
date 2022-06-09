@@ -65,57 +65,92 @@ section .video div button:hover {
   border-radius: 200px;
 }
 
-section .imagen {
+.imagen {
+  width: 90%;
+  max-width: 120em;
+  color: var(--negro);
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  border-radius: 1em;
+  padding: 2em;
+  transition: all .4s;
+  overflow: hidden;
+}
+
+.imagen img {
+  width: calc(33.3333% - 2em);
+  min-height: 10vh;
+  color: var(--negro);
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  border-radius: 1em;
+  transition: all .4s;
+}
+
+.puntos {
   width: 100%;
-  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 0;
+  padding: .4em;
+  display: flex;
+}
+
+.puntos ul {
+  width: 100%;
+  background-color: red;
+  padding: 1em;
+}
+
+.punto {
+  width: 2em;
+  height: 2em;
+  color: #000;
+  background-color: #fff;
+  border-radius: 1em;
+  margin: 1em 1em 0;
+  transition: all .4s;
+  box-shadow: .6em .6em 1.2em gray, -.6em -.6em 1.2em gray, inset 0 0 #0000, inset 0 0 #0000;
+}
+
+.imagenes {
+  width: 300%;
+  border-radius: 1em;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  transition: all .5s;
+  display: flex;
+  transform: translateX(0%);
+}
+
+.imagenes img {
+  width: calc(33.3333% - 3em);
+  background-color: beige;
+}
+
+.activo {
+  background-color: #add8e6;
+}
+
+.imagenResponsive {
+  width: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-section .imagen img {
-  width: 70%;
-  padding: 20px;
-}
-
-section .imagen .uno {
-  width: 10%;
-  justify-content: end;
+.imagenResponsive picture {
+  width: 100%;
+  justify-content: center;
   display: flex;
 }
 
-section .imagen .uno button {
-  width: 20px;
-  height: 20px;
-  background-color: gray;
-  border-radius: 100px;
-}
-
-section .imagen .uno button:hover {
-  width: 30px;
-  height: 30px;
-  background-color: #d3d3d3;
-  border-radius: 200px;
-}
-
-section .imagen .dos {
-  width: 10%;
-  justify-content: start;
-  display: flex;
-}
-
-section .imagen .dos button {
-  width: 20px;
-  height: 20px;
-  background-color: gray;
-  border-radius: 100px;
-}
-
-section .imagen .dos button:hover {
-  width: 30px;
-  height: 30px;
-  background-color: #d3d3d3;
-  border-radius: 200px;
+.imagenResponsive img {
+  width: 60%;
+  max-height: 70vh;
 }
 
 footer {

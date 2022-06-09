@@ -52,43 +52,73 @@ section
         height: 30px
         border-radius: 200px
         background-color: lightgray
-  .imagen
+.imagen
+  width: 90%
+  max-width: 120em
+  padding: 2em
+  color: var(--negro)
+  transition: all 0.4s ease
+  border-radius: 1em
+  background-color: var(--blanco)
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent
+  overflow: hidden
+  img
+    width: calc( 100% / 3 - 2em)
+    min-height: 10vh
+    color: var(--negro)
+    transition: all 0.4s ease
+    border-radius: 1em
+    background-color: var(--blanco)
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent
+.puntos
+  width: 100%
+  margin: 1em 0 0
+  padding: 0.4em
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  ul
+    width: 100%
+    background-color: red
+    padding: 1em
+.punto
+  width: 2em
+  height: 2em
+  margin: 1em 1em 0
+  color: black
+  transition: all 0.4s ease
+  border-radius: 1em
+  background-color: white
+  box-shadow: 0.6em 0.6em 1.2em gray, -0.6em -0.6em 1.2em gray, inset 0 0 0 transparent, inset 0 0 0 transparent
+.imagenes
+  width: 300%
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+  transition: all 0.4s ease
+  border-radius: 1em
+  padding: 2em
+  transition: all 0.5s ease
+  transform: translateX(0%)
+  img
+    width: calc(100%/3 - 3em)
+    background-color: beige
+.activo
+  background-color: lightblue
+.imagenResponsive
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  picture
     width: 100%
     display: flex
-    flex-wrap: wrap
     justify-content: center
-    align-items: center
-    img
-      width: 70%
-      padding: 20px
-    .uno
-      width: 10%
-      display: flex
-      justify-content: end
-      button
-        background-color: gray
-        border-radius: 100px
-        width: 20px
-        height: 20px
-      button:hover
-        width: 30px
-        height: 30px
-        border-radius: 200px
-        background-color: lightgray
-    .dos
-      width: 10%
-      display: flex
-      justify-content: start
-      button
-        background-color: gray
-        border-radius: 100px
-        width: 20px
-        height: 20px
-      button:hover
-        width: 30px
-        height: 30px
-        border-radius: 200px
-        background-color: lightgray
+  img
+    width: 60%
+    max-height: 70vh
 footer
   background-color: black
   min-height: 10vh

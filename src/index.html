@@ -25,9 +25,16 @@
                 </div>
             </article>
             <article class="imagen">
-                <div class="uno"><button onclick="atras()"><</button></div>
-                <img id="image" src="multimedia/escenario1.png">
-                <div class="dos"><button onclick="siguiente()">></button></div>
+                <div class="imagenes">
+                    <img src="multimedia/escenario1.png" alt="imagen 1">
+                    <img src="multimedia/escenario2.png" alt="imagen 2">
+                    <img src="multimedia/escenario3.png" alt="imagen 3">
+                </div>
+                <ul class="puntos">
+                    <li class="punto activo"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                </ul>
             </article>
             <article class="audio">
                 <audio src="multimedia/song.mp3" controls="controls" type="audio/mp3" preload="preload">
@@ -36,67 +43,15 @@
                     <source src="multimedia/song.wav" type="audio/wav">
                 </audio>
             </article>
+            <article class="imagenResponsive">
+                <picture>
+                    <source media="(max-width:1000px)" srcset="multimedia/escenario1_retrato.png">
+                    <img src="multimedia/escenario1.png" alt="Primer escenario de Kakali">
+                </picture>
+            </article>
         </section>
     </main>
     <footer></footer>
-    <script>
-        var video = document.getElementById("videoPlayer")
-        function playPause() {
-            if (video.paused)
-                video.play()
-            else
-                video.pause()
-        }
-        var audio = document.getElementById("audioPlayer")
-        function playPauseAd() {
-            if (audio.onpause){
-                audio.onplay
-            }
-            else{
-                audio.onpause
-            }
-        }
-        var imagen = document.getElementById("image")
-        var imagenes = [
-            "multimedia/escenario1.png",
-            "multimedia/escenario2.png",
-            "multimedia/escenario3.png"
-        ]
-        function siguiente(){
-            if (imagen == imagenes[2]){
-                imagen.src = imagenes[0]
-            }
-            else {
-                imagen.src = imagenes[(imagenes.indexOf(imagen)-1)]
-            }
-        }
-        function atras(){
-            if (imagen == imagenes[0]){
-                imagen.src = imagenes[imagenes.length]
-            }
-            else{
-                imagen.src = imagenes[(imagenes.indexOf(imagen)+1)]
-            }
-        }
-
-        /*var imagen = document.getElementById("carrusel")
-        var imagenes = ["escenario1.png","escenario2.png","escenario3.png"]
-        function anterior(){
-            if (imagen == imagenes[0]){
-                imagen = imagenes[3]
-            }
-            else{
-                imagen = imagenes[(imagenes.indexOf(imagen))-1]
-            }
-        }
-        function siguiente(){
-            if (imagen == imagenes[3]){
-                imagen = imagenes[0]
-            }
-            else{
-                imagen = imagenes[(imagenes.indexOf(imagen))+1]
-            }
-        }*/
-    </script>
 </body>
+<script src="codeJS.js"></script>
 </html>

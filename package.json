@@ -8,6 +8,6 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
-    "parcel": "latest"
+    "parcel": "^2.6.0"
   }
 }

@@ -25,9 +25,16 @@
                 </div>
             </article>
             <article class="imagen">
-                <div class="uno"><button onclick="atras()"><</button></div>
-                <img id="image" src="/escenario1.6f2a0a73.png">
-                <div class="dos"><button onclick="siguiente()">></button></div>
+                <div class="imagenes">
+                    <img src="/escenario1.6f2a0a73.png" alt="imagen 1">
+                    <img src="/escenario2.5af67a18.png" alt="imagen 2">
+                    <img src="/escenario3.389d55ee.png" alt="imagen 3">
+                </div>
+                <ul class="puntos">
+                    <li class="punto activo"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                </ul>
             </article>
             <article class="audio">
                 <audio src="/song.494ab13c.mp3" controls="controls" type="audio/mp3" preload="preload">
@@ -36,51 +43,15 @@
                     <source src="/song.27c17ce4.wav" type="audio/wav">
                 </audio>
             </article>
+            <article class="imagenResponsive">
+                <picture>
+                    <source media="(max-width:1000px)" srcset="/escenario1_retrato.abb74e38.png">
+                    <img src="/escenario1.6f2a0a73.png" alt="Primer escenario de Kakali">
+                </picture>
+            </article>
         </section>
     </main>
     <footer></footer>
-    <script>var video = document.getElementById("videoPlayer");
-function playPause() {
-    if (video.paused) video.play();
-    else video.pause();
-}
-var audio = document.getElementById("audioPlayer");
-function playPauseAd() {
-    if (audio.onpause) audio.onplay;
-    else audio.onpause;
-}
-var imagen = document.getElementById("image");
-var imagenes = [
-    "multimedia/escenario1.png",
-    "multimedia/escenario2.png",
-    "multimedia/escenario3.png"
-];
-function siguiente() {
-    if (imagen == imagenes[2]) imagen.src = imagenes[0];
-    else imagen.src = imagenes[imagenes.indexOf(imagen) - 1];
-}
-function atras() {
-    if (imagen == imagenes[0]) imagen.src = imagenes[imagenes.length];
-    else imagen.src = imagenes[imagenes.indexOf(imagen) + 1];
-} /*var imagen = document.getElementById("carrusel")
-        var imagenes = ["escenario1.png","escenario2.png","escenario3.png"]
-        function anterior(){
-            if (imagen == imagenes[0]){
-                imagen = imagenes[3]
-            }
-            else{
-                imagen = imagenes[(imagenes.indexOf(imagen))-1]
-            }
-        }
-        function siguiente(){
-            if (imagen == imagenes[3]){
-                imagen = imagenes[0]
-            }
-            else{
-                imagen = imagenes[(imagenes.indexOf(imagen))+1]
-            }
-        }*/ 
-
-</script>
 </body>
+<script src="/index.72fb3220.js"></script>
 </html>
